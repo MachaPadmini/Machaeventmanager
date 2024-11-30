@@ -39,7 +39,7 @@ exports.handler = async (event, context) => {
 
       return {
         statusCode: 200,
-        headers: { ...corsHeaders, "Content-Type": "text/html" },
+        headers: { corsHeaders, "Content-Type": "text/html" },
         body: htmlContent,
       };
     } else {
