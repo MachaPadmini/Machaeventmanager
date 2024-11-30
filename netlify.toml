@@ -1,0 +1,2 @@
+[build]
+  functions = "functions" # Location of serverless functions
