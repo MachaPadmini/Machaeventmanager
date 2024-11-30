@@ -30,7 +30,7 @@ exports.handler = async (event, context) => {
           ]
         }),
       };
-    } else if (requestPath.endsWith("/")) {
+    } else if (requestPath.endsWith("/html")) {
       // Endpoint: /html
       const filePath = path.join(__dirname, "public/index.html");
 
@@ -39,7 +39,7 @@ exports.handler = async (event, context) => {
 
       return {
         statusCode: 200,
-        headers: { corsHeaders, "Content-Type": "text/html" },
+        headers: { ...corsHeaders, "Content-Type": "text/html" },
         body: htmlContent,
       };
     } else {
