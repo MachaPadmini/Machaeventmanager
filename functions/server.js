@@ -43,7 +43,7 @@ app.get("/api", async (req, res) => {
 
 app.get('/', (req, res) => {
     const filePath = path.join(__dirname,'index.html'); 
-    fs.readFile(filePath, 'utf8', (err, data) => {
+    fs.readFile(".netlify/functions/public/index.html", 'utf8', (err, data) => {
       if (err) {
         return res.status(500).send('Failed to load the page');
       }
