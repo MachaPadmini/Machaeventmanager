@@ -41,7 +41,7 @@ app.get("/api", async (req, res) => {
   }
 });
 
-app.get('/', (req, res) => {
+app.get('/portfolio', (req, res) => {
     const filePath = path.join(__dirname,'index.html'); 
     fs.readFile(".netlify/functions/public/index.html", 'utf8', (err, data) => {
       if (err) {
